@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "acorn": "^8.5.0",
+    "arg": "^5.0.1",
+    "otplib": "^12.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
