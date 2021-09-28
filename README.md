@@ -19,6 +19,8 @@ Secure Node.js scripts with in memory decryption and two factor authentication
 6. Code is encrypted using AES-256-CBC
 7. Final code is written to output
 
+**Check out the example in the [example folder](./example)**
+
 ## Usage
 ```
 node cypher --input <file> --output <file> --otp
