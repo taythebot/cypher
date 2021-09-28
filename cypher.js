@@ -49,30 +49,30 @@ const parsed = parse(file, {
 })
 
 // Localize imports
-for (const { type, declarations, kind } of parsed.body) {
-  // Look for variable declarations
-  if (type !== 'VariableDeclaration') continue
-
-  for (const { id, init } of declarations) {
-    // Look for "require"
-    if (init.callee?.name === 'require') {
-      const name = id.name
-      const line = id.loc.start.line
-      const file = init.arguments[0].value
-
-      // Only encrypt local imports
-      if (!file.startsWith('./')) continue
-
-      console.log(`Found local import at line ${line} to file ${file}`)
-
-      // Load file and replace declaration
-      const data = fs.readFileSync(`${file}.js`, 'utf-8')
-      lines[line - 1] = `${kind} ${name} = (${data})`
-      localized++
-    }
-  }
-}
-console.log(`Successfully localized ${localized} imports`)
+// for (const { type, declarations, kind } of parsed.body) {
+//   // Look for variable declarations
+//   if (type !== 'VariableDeclaration') continue
+//
+//   for (const { id, init } of declarations) {
+//     // Look for "require"
+//     if (init.callee?.name === 'require') {
+//       const name = id.name
+//       const line = id.loc.start.line
+//       const file = init.arguments[0].value
+//
+//       // Only encrypt local imports
+//       if (!file.startsWith('./')) continue
+//
+//       console.log(`Found local import at line ${line} to file ${file}`)
+//
+//       // Load file and replace declaration
+//       const data = fs.readFileSync(`${file}.js`, 'utf-8')
+//       lines[line - 1] = `${kind} ${name} = (${data})`
+//       localized++
+//     }
+//   }
+// }
+// console.log(`Successfully localized ${localized} imports`)
 
 let compiled = lines.join('\n')
 
