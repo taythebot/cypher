@@ -10,6 +10,11 @@ Secure Node.js scripts with in memory decryption and two factor authentication
 * Calls garbage collector to clear memory after decryption
 * Works with Vercel's pkg to compile into executable (Use `--options expose_gc` when building)
 
+## Use cases
+* Securely distribute Node.js scripts
+* Protect scripts from unauthorized execution
+* Protect script source code
+
 ## How it works
 1. All imports are local imports are localized
 2. OTP secret is generated
