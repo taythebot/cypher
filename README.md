@@ -12,8 +12,8 @@ Secure Node.js scripts with in memory decryption and two factor authentication
 
 ## How it works
 1. All imports are local imports are localized
-2. OTP secret is generated (OTP code is encrypted)
-3. OTP code is wrapped around code
+2. OTP secret is generated
+3. OTP code is wrapped around code (OTP code & secret is encrypted)
 4. Random password is generated
 5. Key is derived from password using Scrypt
 6. Code is encrypted using AES-256-CBC
