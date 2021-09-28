@@ -1,7 +1,7 @@
 # Cypher
 Secure Node.js scripts with in memory decryption and two factor authentication
 
-**I am not responsible for your usage. Use at your own risk**
+**I am not responsible for your actions. Use at your own discretion.**
 
 ## Features
 * Randomly generated 32 character password
