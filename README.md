@@ -6,7 +6,7 @@ Secure Node.js scripts with in memory decryption and two factor authentication
 ## Features
 * Randomly generated 32 character password
 * Uses AES-256-CBC encryption
-* Uses Scrypt to derive encryption key (Slows down bruteforce attacks)
+* Uses Scrypt to derive encryption key (Protects against bruteforce attacks)
 * OTP support for two factor authentication (OTP Secret is encrypted)
 * Calls garbage collector to clear memory after decryption (Protects against memory dump attacks)
 * Works with Vercel's pkg to compile into executable (Use `--options expose_gc` when building)
