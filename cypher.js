@@ -2,7 +2,7 @@
 
 const arg = require('arg')
 const fs = require('fs')
-const { parse } = require('acorn')
+// const { parse } = require('acorn')
 const { authenticator } = require('otplib')
 
 const aes = require('./utils/aes')
@@ -42,11 +42,11 @@ console.log('Made by Tay (https://github.com/taythebot)\n')
 console.log(`Encrypting file ${args['--input']}`)
 
 // Parse file
-const parsed = parse(file, {
-  ecmaVersion: 'latest',
-  sourceType: 'script',
-  locations: true,
-})
+// const parsed = parse(file, {
+//   ecmaVersion: 'latest',
+//   sourceType: 'script',
+//   locations: true,
+// })
 
 // Localize imports
 // for (const { type, declarations, kind } of parsed.body) {
