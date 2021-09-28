@@ -206,7 +206,12 @@ const decrypt = () => {
   )
 })()
 `
-fs.writeFileSync(args['--output'], template, 'utf-8')
-console.log(`Wrote to file ${args['--output']}`)
+
+try {
+  fs.writeFileSync(args['--output'], template, 'utf-8')
+  console.log(`Wrote to file ${args['--output']}`)
+} catch (error) {
+  error(`Failed to write to output file: ${error.message}`)
+}
 
 console.log(`Password is ${password}`)
