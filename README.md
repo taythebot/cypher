@@ -5,7 +5,7 @@ Secure Node.js scripts with in memory decryption and two factor authentication
 
 ## Features
 * Uses AES-256-CBC encryption
-* Uses Scrypt to derive encryption key
+* Uses Scrypt to derive encryption key (Slows down bruteforce attacks)
 * OTP support for two factor authentication
 * Calls garbage collector to clear memory after decryption
 * Works with Vercel's pkg to compile into executable (Use `--options expose_gc` when building)
